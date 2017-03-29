@@ -22,6 +22,7 @@ class WikiGraph:
         with open(filename) as f:
             s = f.read().split()
             (n, _nlinks) = [int(x) for x in (s[0], s[1])]
+            self._n = n
 
             # links - это edges
             self._titles = []   #
@@ -57,16 +58,18 @@ class WikiGraph:
         print('Граф загружен')
 
     def get_number_of_links_from(self, _id):
-        pass
+        return len(self.get_links_from(_id))
 
     def get_links_from(self, _id):
-        pass
+        return self._links[self._offset[_id]:self._offset[_id+1]]
 
     def get_id(self, title):
-        pass
+        for i in range(len(self._titles)):
+            if title == self._titles[i]:
+                return i
 
     def get_number_of_pages(self):
-        pass
+        return self._n
 
     def is_redirect(self, _id):
         if self._redirect[_id]:
@@ -74,10 +77,10 @@ class WikiGraph:
         return False
 
     def get_title(self, _id):
-        pass
+        return self._titles[_id]
 
     def get_page_size(self, _id):
-        pass
+        return self._sizes[_id]
 
 
 def hist(fname, data, bins, xlabel, ylabel, title, facecolor='green', alpha=0.5, transparent=True, **kwargs):

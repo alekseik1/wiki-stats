@@ -18,8 +18,14 @@
         <entry file="file://$PROJECT_DIR$/wiki_stats.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="164">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-              <folding />
+              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <folding>
+                <element signature="e#1690#1790#0" expanded="false" />
+                <element signature="e#1835#1849#0" expanded="false" />
+                <element signature="e#1891#1959#0" expanded="false" />
+                <element signature="e#1999#2023#0" expanded="false" />
+                <element signature="e#2067#2090#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -257,8 +263,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wiki_stats.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="17" />
+          <line>100</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -268,11 +274,15 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="wg.is_redirect(0)" language="Python" />
+        <watch expression="wg.get_title(1)" language="Python" />
+        <watch expression="wg.get_page_size(1)" language="Python" />
+        <watch expression="wg.get_id(&quot;GNU&quot;)" language="Python" />
+        <watch expression="wg.get_number_of_pages()" language="Python" />
+        <watch expression="wg.get_links_from(0)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -288,8 +298,14 @@
     <entry file="file://$PROJECT_DIR$/wiki_stats.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#1690#1790#0" expanded="false" />
+            <element signature="e#1835#1849#0" expanded="false" />
+            <element signature="e#1891#1959#0" expanded="false" />
+            <element signature="e#1999#2023#0" expanded="false" />
+            <element signature="e#2067#2090#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
