@@ -20,16 +20,22 @@ class WikiGraph:
         print('Загружаю граф из файла: ' + filename)
 
         with open(filename) as f:
-            (n, _nlinks) = (0, 0) # TODO: прочитать из файла
-            
+            s = f.read().split()
+            (n, _nlinks) = [int(x) for x in (s[0], s[1])]
+
+            # Sizes - это тот edges из контеста
             self._titles = []
             self._sizes = array.array('L', [0]*n)
             self._links = array.array('L', [0]*_nlinks)
             self._redirect = array.array('B', [0]*n)
             self._offset = array.array('L', [0]*(n+1))
 
-            # TODO: прочитать граф из файла
-
+            j = 0
+            i = 3
+            while j != n:
+                self._sizes[j] = int(s[i+2])
+                i += self._sizes[j] + 4
+                j += 1
         print('Граф загружен')
 
     def get_number_of_links_from(self, _id):
