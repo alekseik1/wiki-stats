@@ -24,11 +24,13 @@ class WikiGraph:
             (n, _nlinks) = [int(x) for x in (s[0], s[1])]
 
             # links - это edges
-            self._titles = []
+            self._titles = []   #
             self._sizes = array.array('L', [0]*n)
-            self._links = array.array('L', [0]*_nlinks)
-            self._redirect = array.array('B', [0]*n)
-            self._offset = array.array('L', [0]*(n+1))
+            self._links = array.array('L', [0]*_nlinks) #
+            self._redirect = array.array('B', [0]*n)    #
+            self._offset = array.array('L', [0]*(n+1))  #
+
+            i = 2
 
             i = 5
             j = 0
@@ -42,9 +44,14 @@ class WikiGraph:
 
             j = 1
             i = 3
+            kk = 0
             self._offset[0] = 0
-            while j != n:
+            while j <= n:
                 self._offset[j] = int(s[i+2]) + self._offset[j-1]
+                self._titles.append(s[i-1])
+                self._redirect[kk] = int(s[i+1])
+                self._sizes[kk] = int(s[i])
+                kk += 1
                 i += int(s[i+2]) + 4
                 j += 1
         print('Граф загружен')
