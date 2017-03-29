@@ -30,11 +30,15 @@ class WikiGraph:
             self._redirect = array.array('B', [0]*n)
             self._offset = array.array('L', [0]*(n+1))
 
-            j = 0
+            j = 1
             i = 3
+            #while
+
+
+            self._offset[0] = 0
             while j != n:
-                self._sizes[j] = int(s[i+2])
-                i += self._sizes[j] + 4
+                self._offset[j] = int(s[i+2]) + self._offset[j-1]
+                i += int(s[i+2]) + 4
                 j += 1
         print('Граф загружен')
 
