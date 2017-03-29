@@ -17,8 +17,8 @@
       <file leaf-file-name="wiki_stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wiki_stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="164">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -257,8 +257,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wiki_stats.py</url>
-          <line>56</line>
-          <option name="timeStamp" value="16" />
+          <line>96</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -268,14 +268,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="self._titles" language="Python" />
-        <watch expression="self._redirect[-1]" language="Python" />
-        <watch expression="self._links[-1]" language="Python" />
-        <watch expression="self._sizes[-2]" language="Python" />
+        <watch expression="wg.is_redirect(0)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -290,8 +287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wiki_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="58" column="42" lean-forward="false" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="164">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding />
         </state>
       </provider>

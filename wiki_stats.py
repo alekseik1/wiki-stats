@@ -25,7 +25,7 @@ class WikiGraph:
 
             # links - это edges
             self._titles = []   #
-            self._sizes = array.array('L', [0]*n)
+            self._sizes = array.array('L', [0]*n)       #
             self._links = array.array('L', [0]*_nlinks) #
             self._redirect = array.array('B', [0]*n)    #
             self._offset = array.array('L', [0]*(n+1))  #
@@ -69,7 +69,9 @@ class WikiGraph:
         pass
 
     def is_redirect(self, _id):
-        pass
+        if self._redirect[_id]:
+            return True
+        return False
 
     def get_title(self, _id):
         pass
@@ -92,6 +94,8 @@ if __name__ == '__main__':
     if os.path.isfile(sys.argv[1]):
         wg = WikiGraph()
         wg.load_from_file(sys.argv[1])
+        wg.is_redirect(4)
+        print()
     else:
         print('Файл с графом не найден')
         sys.exit(-1)
