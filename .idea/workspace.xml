@@ -17,8 +17,8 @@
       <file leaf-file-name="wiki_stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wiki_stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="192">
+              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -258,7 +258,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/wiki_stats.py</url>
-          <line>42</line>
+          <line>49</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -269,16 +269,13 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="s[i+2]" language="Python" />
-        <watch expression="s[i:i+3]" language="Python" />
-        <watch expression="self._sizes" language="Python" />
-        <watch expression="s" language="Python" />
-        <watch expression="s[i]" language="Python" />
-        <watch expression="self._offset" language="Python" />
+        <watch expression="self._links" language="Python" />
+        <watch expression="self._links[-1]" language="Python" />
+        <watch expression="[int(x) for x in s[i+1:k+1]]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
@@ -293,8 +290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wiki_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="192">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
           <folding />
         </state>
       </provider>

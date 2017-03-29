@@ -23,18 +23,25 @@ class WikiGraph:
             s = f.read().split()
             (n, _nlinks) = [int(x) for x in (s[0], s[1])]
 
-            # Sizes - это тот edges из контеста
+            # links - это edges
             self._titles = []
             self._sizes = array.array('L', [0]*n)
             self._links = array.array('L', [0]*_nlinks)
             self._redirect = array.array('B', [0]*n)
             self._offset = array.array('L', [0]*(n+1))
 
+            i = 5
+            j = 0
+            while i < len(s):
+                k = i+int(s[i])
+                tmp = [int(x) for x in s[i+1:k+1]]
+                for lk in tmp:
+                    self._links[j] = lk
+                    j += 1
+                i = k + 4
+
             j = 1
             i = 3
-            #while
-
-
             self._offset[0] = 0
             while j != n:
                 self._offset[j] = int(s[i+2]) + self._offset[j-1]
